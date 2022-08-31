@@ -5,40 +5,75 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField]
-    public Transform target;
-    public LayerMask obstacleMask;
+    [System.Serializable]
+    public class TrackingSettings {
+        [Min(0)]
+        public float trackingRange;
+        public Transform target;
+        public Transform targetViewpoint;
+        public LayerMask obstacleMask;
+    }
+    public TrackingSettings trackingSettings;
 
-    NavMeshAgent navMeshAgent;
 
-    new Renderer renderer;
+    private BoxCollider viewCollider;
+    private NavMeshAgent navMeshAgent;
+    private new Renderer renderer;
 
 
-    // Start is called before the first frame update
     void Start()
     {
+        viewCollider = GetComponent<BoxCollider>();
         navMeshAgent = GetComponent<NavMeshAgent>();  
-        renderer = GetComponent<Renderer>();      
+        renderer = GetComponent<Renderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        bool isVisible = isTargetVisible(target);
+        
+        bool isVisible = IsTargetVisible(trackingSettings.targetViewpoint);
 
-        if (isVisible)
-            navMeshAgent.SetDestination(transform.position); // Stay in place
+        
+        if (!isVisible && ShouldChaseTarget())
+        {
+            navMeshAgent.SetDestination(trackingSettings.target.position); // Move towards player
+        }
         else
-            navMeshAgent.SetDestination(target.position); // Move towards player
+        {
+            navMeshAgent.SetDestination(transform.position); // Stay in place
+        }            
     }
 
-    bool isTargetVisible(Transform target) 
+    private bool IsTargetVisible(Transform _target) 
     {
         if (!renderer.isVisible)
             return false;
 
-        Vector3 normalVector = (target.position - transform.position).normalized;
-        float distance = Vector3.Distance(transform.position, target.position);
-        return !Physics.Raycast(transform.position, normalVector, distance, obstacleMask);
+
+        Vector3[] colliderCorners = new Vector3[8];
+        for (int i = 0; i < colliderCorners.Length ; ++i)
+        {
+            Vector3 size = viewCollider.size;
+            size.Scale (new Vector3((i & 1) == 0 ? 1: -1, (i & 2) == 0 ? 1 : -1, (i & 4) == 0 ? 1 : -1));
+
+            Vector3 corner = viewCollider.transform.TransformPoint(viewCollider.center + size * .5f);
+            colliderCorners[i] = corner;
+            Debug.DrawLine(transform.position, corner);
+        }  
+        
+        foreach (Vector3 corner in colliderCorners)
+        {
+            Vector3 normalVector = (_target.transform.position - corner).normalized;
+            float distance = Vector3.Distance(corner, _target.position);
+            
+            if (!Physics.Raycast(corner, normalVector, distance, trackingSettings.obstacleMask))
+                return true;
+        }
+        return false;
+    }
+
+    private bool ShouldChaseTarget() {
+        float distanceToTarget = Vector3.Distance(trackingSettings.target.position, transform.position);
+        return distanceToTarget <= trackingSettings.trackingRange;
     }
 }
