@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
         public Transform targetViewpoint;
         public LayerMask obstacleMask;
     }
-    public TrackingSettings trackingSettings;
+    [SerializeField] public TrackingSettings trackingSettings;
 
 
     private BoxCollider viewCollider;

@@ -925,6 +925,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ab33e6080ae416b4d899f39fa8951b98, type: 3}
   m_PrefabInstance: {fileID: 1724044531}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1016735946 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+  m_PrefabInstance: {fileID: 2072801948}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1176808863 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4620f3c93dca8c94c9124d8ba443f43e, type: 3}
@@ -1539,6 +1550,138 @@ PrefabInstance:
     - target: {fileID: 11400006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 490503517}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: weaponSettings.rpm
+      value: 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: weaponSettings.damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: weaponSettings.recoil
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: weaponSettings.palletSpread
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: weaponSettings.penetrateLayers.m_Bits
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: FOV
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 490503517}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: fpsCamera
+      value: 
+      objectReference: {fileID: 490503517}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: AimReticle
+      value: 
+      objectReference: {fileID: 510588198}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: aimReticle
+      value: 
+      objectReference: {fileID: 510588198}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 1016735946}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: zoomRotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: zoomRotation.y
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: zoomTransform.x
+      value: 0.9685
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: zoomTransform.y
+      value: -0.2015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: zoomTransform.z
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: defaultTransform.x
+      value: 0.704
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: defaultTransform.y
+      value: -0.293
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: sensitivityModifier
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: transformSettings.zoomRotation.w
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: transformSettings.zoomRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: transformSettings.zoomRotation.y
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: transformSettings.zoomRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: transformSettings.zoomTransform.x
+      value: 0.9685
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: transformSettings.zoomTransform.y
+      value: -0.2015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: transformSettings.zoomTransform.z
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204901399367685388, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204901399367846188, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.704
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204901399367846188, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.293
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204901399367846188, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1363214
+      objectReference: {fileID: 0}
+    - target: {fileID: 8179622776662621062, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: weaponSettings.rpm
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8179622776662621062, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: weaponSettings.palletsPerShot
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
