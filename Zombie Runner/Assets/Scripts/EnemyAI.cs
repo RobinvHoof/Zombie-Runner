@@ -14,18 +14,19 @@ public class EnemyAI : MonoBehaviour
         public LayerMask obstacleMask;
     }
     [SerializeField] public TrackingSettings trackingSettings;
+    [SerializeField] public Renderer statue;
 
 
     private BoxCollider viewCollider;
     private NavMeshAgent navMeshAgent;
-    private new Renderer renderer;
+    //private new Renderer renderer;
 
 
     void Start()
     {
         viewCollider = GetComponent<BoxCollider>();
         navMeshAgent = GetComponent<NavMeshAgent>();  
-        renderer = GetComponent<Renderer>();
+        //renderer = GetComponent<Renderer>();
     }
 
     void Update()
@@ -46,7 +47,7 @@ public class EnemyAI : MonoBehaviour
 
     private bool IsTargetVisible(Transform _target) 
     {
-        if (!renderer.isVisible)
+        if (!statue.isVisible)
             return false;
 
 

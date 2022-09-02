@@ -265,12 +265,12 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3849870624831026344}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.125, b: 0.125, a: 1}
-  m_Intensity: 0
+  m_Intensity: 1
   m_Range: 0.2
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -934,52 +934,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 7d7fa78d67452d04d83bb20a5f8946b8, type: 3}
   m_PrefabInstance: {fileID: 3286252658675851216}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3985934798672398522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3286252658675882352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cd619fe4e861354aafb2a0ce9f4d7d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpsController: {fileID: 0}
-  transformSettings:
-    normalFOV: 60
-    zoomFOV: 20
-    zoomTransform: {x: 0, y: 0, z: 0}
-    zoomRotation: {x: 0, y: 0, z: 0, w: 0}
-  FPCamera: {fileID: 0}
-  aimReticle: {fileID: 0}
-  recoilModifier: 0.2
-  sensitivityModifier: 0.5
---- !u!114 &8179622776662621062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3286252658675882352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c36fa77ca5f77474881584f879aef9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponSettings:
-    rpm: 60
-    damage: 1
-    range: 100
-    palletsPerShot: 1
-    recoil: 0
-    penetrateLayers:
-      serializedVersion: 2
-      m_Bits: 0
-  FPCamera: {fileID: 0}
-  muzzleFlash: {fileID: 3020802151627050804}
-  hitEffect: {fileID: 4579628040963356380, guid: 8520485ba01dcb84aa8cf24dfbccecd9, type: 3}
 --- !u!95 &3732590022577681834
 Animator:
   serializedVersion: 4
@@ -1000,3 +954,46 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3985934798672398522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3286252658675882352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd619fe4e861354aafb2a0ce9f4d7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsController: {fileID: 0}
+  FPCamera: {fileID: 0}
+  aimReticle: {fileID: 0}
+  recoilModifier: 0.2
+  sensitivityModifier: 0.5
+  FOV: 60
+--- !u!114 &8179622776662621062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3286252658675882352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36fa77ca5f77474881584f879aef9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSettings:
+    rpm: 60
+    damage: 1
+    range: 100
+    palletsPerShot: 1
+    palletSpread: 0
+    recoil: 0
+    penetrateLayers:
+      serializedVersion: 2
+      m_Bits: 0
+  FPCamera: {fileID: 0}
+  muzzleFlash: {fileID: 3020802151627050804}
+  hitEffect: {fileID: 4579628040963356380, guid: 8520485ba01dcb84aa8cf24dfbccecd9, type: 3}

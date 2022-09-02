@@ -11,6 +11,7 @@ public class WeaponZoom : MonoBehaviour
     [SerializeField] Canvas aimReticle;
 
     [SerializeField, Range(0, 2)] float recoilModifier = 0.2f;
+    [SerializeField, Range(0, 2)] float spreadModifier = 1f;
     [SerializeField, Range(0, 1)] float sensitivityModifier = 0.5f;
     [SerializeField] float FOV = 60;
 
@@ -18,6 +19,7 @@ public class WeaponZoom : MonoBehaviour
     private Vector3 defaultTransform;
     private Quaternion defaultRotation;
     private float defaultRecoil;
+    private float defaultSpread;
     private float defaultSensitivity;
 
     private Weapon weapon;
@@ -29,6 +31,7 @@ public class WeaponZoom : MonoBehaviour
         
         defaultRotation = transform.localRotation;
         defaultRecoil = weapon.weaponSettings.recoil;
+        defaultSpread = weapon.weaponSettings.palletSpread;
         defaultSensitivity = fpsController.mouseLook.XSensitivity;
     }
 
@@ -42,6 +45,7 @@ public class WeaponZoom : MonoBehaviour
 
             aimReticle.enabled = false;
             weapon.weaponSettings.recoil = defaultRecoil * recoilModifier;
+            weapon.weaponSettings.palletSpread = defaultSpread * spreadModifier;
 
             fpsController.mouseLook.XSensitivity = defaultSensitivity * sensitivityModifier;
             fpsController.mouseLook.YSensitivity = defaultSensitivity * sensitivityModifier;
@@ -54,6 +58,7 @@ public class WeaponZoom : MonoBehaviour
 
             aimReticle.enabled = true;
             weapon.weaponSettings.recoil = defaultRecoil;
+            weapon.weaponSettings.palletSpread = defaultSpread;
 
             fpsController.mouseLook.XSensitivity = defaultSensitivity;
             fpsController.mouseLook.YSensitivity = defaultSensitivity;

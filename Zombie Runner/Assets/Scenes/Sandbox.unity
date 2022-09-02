@@ -1415,7 +1415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205565680757535651, guid: df523087dfd268e4992e0c3822919ce1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5373933
+      value: -2.54
       objectReference: {fileID: 0}
     - target: {fileID: 3205565680757535651, guid: df523087dfd268e4992e0c3822919ce1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1557,19 +1557,23 @@ PrefabInstance:
       objectReference: {fileID: 490503517}
     - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: weaponSettings.rpm
-      value: 480
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: weaponSettings.damage
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: weaponSettings.recoil
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: weaponSettings.palletSpread
-      value: 2.5
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: weaponSettings.palletsPerShot
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: weaponSettings.penetrateLayers.m_Bits
@@ -1599,6 +1603,14 @@ PrefabInstance:
       propertyPath: fpsController
       value: 
       objectReference: {fileID: 1016735946}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: recoilModifier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: spreadModifier
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: zoomRotation.w
       value: 0.70710677
@@ -1707,7 +1719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205565680757535651, guid: df523087dfd268e4992e0c3822919ce1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1173935
+      value: -2.56
       objectReference: {fileID: 0}
     - target: {fileID: 3205565680757535651, guid: df523087dfd268e4992e0c3822919ce1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1760,6 +1772,14 @@ PrefabInstance:
     - target: {fileID: 3205565680757535677, guid: df523087dfd268e4992e0c3822919ce1, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088569483039544626, guid: df523087dfd268e4992e0c3822919ce1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088569483039544626, guid: df523087dfd268e4992e0c3822919ce1, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.010390981
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df523087dfd268e4992e0c3822919ce1, type: 3}
