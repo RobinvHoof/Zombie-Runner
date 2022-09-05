@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour, IAttackable
 {
     [Min(0)]
     [SerializeField] public float startHealt = 100;
@@ -19,8 +19,8 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void OnWeaponHit(Weapon weapon)
+    public void Hit(Attack attack, GameObject source)
     {
-        health -= weapon.weaponSettings.damage;
+        health -= attack.attackSettings.damage;
     }
 }

@@ -1556,8 +1556,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 490503517}
     - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: gunSettings.rpm
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: gunSettings.recoil
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: weaponSettings.rpm
-      value: 30
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: attackSettings.damage
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: weaponSettings.damage
@@ -1565,7 +1577,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: weaponSettings.recoil
-      value: 1
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: gunSettings.palletSpread
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: gunSettings.palletsPerShot
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: weaponSettings.palletSpread
@@ -1573,7 +1593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: weaponSettings.palletsPerShot
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 721976721590908922, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: weaponSettings.penetrateLayers.m_Bits
@@ -1605,11 +1625,11 @@ PrefabInstance:
       objectReference: {fileID: 1016735946}
     - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: recoilModifier
-      value: 0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: spreadModifier
-      value: 0.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5537108704283919558, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: zoomRotation.w

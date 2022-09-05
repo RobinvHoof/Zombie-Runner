@@ -51,7 +51,7 @@ BoxCollider:
   m_GameObject: {fileID: 601926219748285860}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -148,7 +148,7 @@ BoxCollider:
   m_GameObject: {fileID: 955000101896874114}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -371,7 +371,7 @@ BoxCollider:
   m_GameObject: {fileID: 4834677666679771227}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -468,7 +468,7 @@ BoxCollider:
   m_GameObject: {fileID: 6509032170389940942}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -540,9 +540,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6862254201502896935}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.58599997}
-  m_LocalScale: {x: 1, y: 0.50596267, z: 0.02454502}
+  m_LocalRotation: {x: 7.1054257e-15, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0000014901161, y: 0.00000009079297, z: 0.5860002}
+  m_LocalScale: {x: 1, y: 0.5059626, z: 0.024545018}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6324434147523539070}
@@ -565,7 +565,7 @@ BoxCollider:
   m_GameObject: {fileID: 6862254201502896935}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -662,7 +662,7 @@ BoxCollider:
   m_GameObject: {fileID: 7360758436565527109}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -723,7 +723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6324434147523539070
 Transform:
   m_ObjectHideFlags: 0
@@ -887,6 +887,10 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 7d7fa78d67452d04d83bb20a5f8946b8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 7d7fa78d67452d04d83bb20a5f8946b8, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: ea263d70aa0de5644a83ec9c0c18ce73, type: 2}
@@ -970,6 +974,7 @@ MonoBehaviour:
   FPCamera: {fileID: 0}
   aimReticle: {fileID: 0}
   recoilModifier: 0.2
+  spreadModifier: 1
   sensitivityModifier: 0.5
   FOV: 60
 --- !u!114 &8179622776662621062
@@ -984,9 +989,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36fa77ca5f77474881584f879aef9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSettings:
-    rpm: 60
+  attackSettings:
     damage: 1
+  gunSettings:
+    rpm: 60
     range: 100
     palletsPerShot: 1
     palletSpread: 0
